@@ -11,9 +11,9 @@ Module['onRuntimeInitialized'] = function() {
   };
 
   const suite = new Benchmark.Suite;
-  suite.add('nimFact', () => nimFact(100))
-    .add('factRec', () => factRec(100))
-    .add('factLoop', () => factLoop(100))
+  suite.add('nimFact', () => nimFact(10, 1))
+    .add('factRec', () => factRec(10, 1))
+    .add('factLoop', () => factLoop(10, 1))
     .on('cycle', event => {
       console.log(String(event.target));
     })
